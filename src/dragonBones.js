@@ -1,5 +1,8 @@
 var dragonBones;
-(function (dragonBones) {
+(function (global) {
+
+
+    dragonBones = dragonBones || {};
 
     var __extends = this.__extends || function (d, b) {
         for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -3512,4 +3515,6 @@ var dragonBones;
         return Armature;
     })(events.EventDispatcher);
     dragonBones.Armature = Armature;
-})(dragonBones || (dragonBones = {}));
+
+    global.dragonBones = dragonBones;
+})(this);
